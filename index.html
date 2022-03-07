@@ -40,7 +40,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="hamburger">
-          <ul class="navbar-nav text-center">
+          <ul class="navbar-nav">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="table.html"
                 >Table</a
@@ -51,7 +51,7 @@
       </div>
     </nav>
 
-    <div class="container-xl mt-5 pt-5">
+    <div class="container-xl mt-5 pt-4">
       <h1>European region countries</h1>
       <p>
         Made with HTML 5 and vanilla JavaScript, with the help of
@@ -62,8 +62,10 @@
         .
       </p>
       <h3>List of countries</h3>
+
+      <ul id="list"></ul>
+      <input type="button" class="btn btn-outline-warning text-center" value="rafraîchir la page" onClick="location.reload()"></input>
+      <p>Source: <a href="https://restcountries.com/"> REST Countries</a>.</p>
     </div>
-    <ul id="list"></ul>
-    <p>Source: <a href="https://restcountries.com/"> REST Countries</a>.</p>
   </body>
 </html>
