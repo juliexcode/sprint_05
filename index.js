@@ -17,7 +17,7 @@ async function render(adresseapi) {
       }
       document.getElementById("list").innerHTML = result;
       let btn = document.createElement("button");
-      let text = document.createTextNode("rafraîchir la liste");
+      let text = document.createTextNode("Rafraîchir la liste");
       btn.appendChild(text);
       btn.classList = "btn btn-outline-dark btn-warning";
       document.getElementById("raf").textContent = "";
@@ -31,7 +31,7 @@ async function render(adresseapi) {
     console.error(e);
     console.log("dans le catch");
     let btn = document.createElement("button");
-    let text = document.createTextNode("rafraîchir la liste");
+    let text = document.createTextNode("Rafraîchir la liste");
     btn.appendChild(text);
     btn.classList = "btn btn-outline-dark btn-warning";
     document.getElementById("raf").textContent = "";

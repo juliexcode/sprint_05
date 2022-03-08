@@ -18,7 +18,7 @@ async function render(adresseapi) {
       }
       document.getElementById("tableau").innerHTML = result;
       let btn = document.createElement("button");
-      let text = document.createTextNode("rafraîchir le tableau");
+      let text = document.createTextNode("Rafraîchir le tableau");
       btn.appendChild(text);
       btn.classList = "btn btn-outline-dark btn-warning";
       document.getElementById("raf").textContent = "";
@@ -32,7 +32,7 @@ async function render(adresseapi) {
     console.error(e);
     console.log("dans le catch");
     let btn = document.createElement("button");
-    let text = document.createTextNode("rafraîchir le tableau");
+    let text = document.createTextNode("Rafraîchir le tableau");
     btn.appendChild(text);
     btn.classList = "btn btn-outline-dark btn-warning";
     document.getElementById("raf").textContent = "";
