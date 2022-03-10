@@ -25,7 +25,6 @@ async function render() {
       document.getElementById("raf").appendChild(btn);
       btn.addEventListener("click", function () {
         render();
-        window.location.reload();
       });
     }
   } catch (e) {

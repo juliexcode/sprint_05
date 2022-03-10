@@ -24,7 +24,6 @@ async function render(adresseapi) {
       document.getElementById("raf").appendChild(btn);
       btn.addEventListener("click", function () {
         render(bonneadresse);
-        window.location.reload();
       });
     }
   } catch (e) {
