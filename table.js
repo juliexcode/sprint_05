@@ -7,6 +7,8 @@ async function render() {
     let response = await fetch("https://restcountries.com/v3.1/region/europe");
     if (response.ok) {
       let data = await response.json();
+      console.log(data);
+      console.log("c'est ok!");
       let result = "";
       for (pays in data) {
         let air = data[pays].area.toLocaleString("en-US");

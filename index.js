@@ -9,9 +9,10 @@ async function render(adresseapi) {
       let data = await response.json();
 
       console.log(data);
+      console.log("c'est ok!");
 
       let result = "";
-
+      console.log(data);
       for (pays in data) {
         result += `<li> ${data[pays].name.official} </li>`;
       }
