@@ -7,3 +7,4 @@ lien figma les wireframes: https://www.figma.com/file/5hihp3vwPLvXzgKfxXspV6/wir
 #######
 mon projet est composé d'un fichier index.html, table.html, index.js, table.js et d'un dossier json composé de index.json et table.json.
 #######
+Vérifier par https://validator.w3.org/
