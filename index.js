@@ -2,7 +2,7 @@
 const bonneadresse = "https://restcountries.com/v3.1/region/europe";
 
 async function render(adresseapi) {
-  console.log("adressevisé: ", adresseapi);
+  // console.log("adressevisé: ", adresseapi);
   try {
     let response = await fetch(adresseapi);
     if (response.ok) {
@@ -17,7 +17,7 @@ async function render(adresseapi) {
       }
       document.getElementById("list").innerHTML = result;
       let btn = document.createElement("button");
-      let text = document.createTextNode("Rafraîchir la liste");
+      let text = document.createTextNode("Refresh list");
       btn.appendChild(text);
       btn.classList = "btn btn-outline-dark btn-warning";
       document.getElementById("raf").textContent = "";
@@ -31,7 +31,7 @@ async function render(adresseapi) {
     console.error(e);
     console.log("dans le catch");
     let btn = document.createElement("button");
-    let text = document.createTextNode("Rafraîchir la liste");
+    let text = document.createTextNode("Refresh list");
     btn.appendChild(text);
     btn.classList = "btn btn-outline-dark btn-warning";
     document.getElementById("raf").textContent = "";

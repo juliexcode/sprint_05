@@ -1,10 +1,10 @@
 // const mauvaisadresse = "https://restcountri1es.com/v3.1/region/europe";
-const bonneadresse = "https://restcountries.com/v3.1/region/europe";
+// const bonneadresse = "https://restcountries.com/v3.1/region/europe";
 
-async function render(adresseapi) {
-  console.log("adressevisé: ", adresseapi);
+async function render() {
+  // console.log("adressevisé: ", adresseapi);
   try {
-    let response = await fetch(adresseapi);
+    let response = await fetch("https://restcountries.com/v3.1/region/europe");
     if (response.ok) {
       let data = await response.json();
       let result = "";
@@ -18,13 +18,13 @@ async function render(adresseapi) {
       }
       document.getElementById("tableau").innerHTML = result;
       let btn = document.createElement("button");
-      let text = document.createTextNode("Rafraîchir le tableau");
+      let text = document.createTextNode("Refresh table");
       btn.appendChild(text);
       btn.classList = "btn btn-outline-dark btn-warning";
       document.getElementById("raf").textContent = "";
       document.getElementById("raf").appendChild(btn);
       btn.addEventListener("click", function () {
-        render(bonneadresse);
+        render();
         window.location.reload();
       });
     }
@@ -32,14 +32,14 @@ async function render(adresseapi) {
     console.error(e);
     console.log("dans le catch");
     let btn = document.createElement("button");
-    let text = document.createTextNode("Rafraîchir le tableau");
+    let text = document.createTextNode("Refresh table");
     btn.appendChild(text);
     btn.classList = "btn btn-outline-dark btn-warning";
     document.getElementById("raf").textContent = "";
     document.getElementById("raf").appendChild(btn);
     btn.addEventListener("click", function () {
-      render(bonneadresse);
+      render();
     });
   }
 }
-render(bonneadresse);
+render();
